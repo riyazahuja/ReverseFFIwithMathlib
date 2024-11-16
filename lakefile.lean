@@ -42,9 +42,17 @@ lean_exe Main where
 
 @[default_target]
 lean_lib «reverseffiwithmathlib» where
-  roots := #[`ReverseFFIWithMathlib]
+  roots := #[`ReverseFFIWithMathlib,`localDep]
   defaultFacets := #[`shared]
   moreLinkArgs :=
     #["-L.lake/packages/batteries/.lake/build/lib/", "-lBatteries"]
+
+-- -- @[default_target]
+-- lean_lib «localDep» where
+--   roots := #[`localDep]
+--   defaultFacets := #[`shared]
+
+lean_exe factorial where
+    root := `ReverseFFIWithMathlib
 
 require batteries from git "https://github.com/leanprover-community/batteries" @ "main"
