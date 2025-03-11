@@ -55,4 +55,4 @@ lean_lib «reverseffiwithmathlib» where
 lean_exe factorial where
     root := `ReverseFFIWithMathlib
 
-require batteries from git "https://github.com/leanprover-community/batteries" @ "main"
+require batteries from git "https://github.com/leanprover-community/batteries" @ "5de63200cb5bb3460e09225874a6e2fe6ca9da5d"
